@@ -7,7 +7,7 @@
 <body>
 	<?php include 'navbar.php';?>
 
-	<div class="d-flex justify-content-center"><img src='./resources/logo.jpeg'></div>
+	<div class="d-flex justify-content-center"></div>
 
 
 	<?php include 'footer.php';?>
