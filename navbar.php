@@ -25,8 +25,21 @@
 	  	</div>
 	    </ul>
 	    <ul class="nav navbar-nav navbar-right">
+	    	<?php if($loggedin):?>
+		    	<li class = "nav-item">
+		    		<a class="nav-link" href="./profile.php"><?php echo $username; ?></a>
+
+		    	</li>
+		    	<li class = "nav-item">
+		           	<a class = "nav-link" href="cart.php">Cart</a>
+		    	</li>
+		    <?php endif ?>
 	    	<li class="nav-item">
-	    		<a class="nav-link" href="./login.php">Login</a>
+	    		<?php if (!$loggedin):?>
+	    			<a class="nav-link" href="./login.php">Login</a>
+	    		<?php else:?>
+	    			<a class="nav-link" href="./logout.php">Logout</a>
+	    		<?php endif; ?>
 	    	</li>
 	    </ul>
 	  </div>
