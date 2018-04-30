@@ -9,7 +9,7 @@
 	<br>
 	<div class="container-fluid">
 	<div class="row">
-	<div class="col-6">
+	<div class="col-9">
   	<div class="row">
     	<div class="col-sm-4">
       		<div class="panel panel-primary">
@@ -62,7 +62,7 @@
 			?>
 	</div>
 	</div>
-	<div class="col-4">
+	<div class="col-1">
     <div class="d-flex flex-row">
     	<div class="p-2">		
 	

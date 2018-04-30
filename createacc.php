@@ -1,51 +1,52 @@
 <?php
+	include './navbar.php'; 
  	if (isset($_GET["submit"])) {
 		if (!$_POST["email"] || !$_POST["pwd"]) {
 	      echo ('<div class="alert alert-danger" role="alert">
 	      Enter a username and password.
-	      </div>');
-	      die;	    
-	  	}
-	    /* MySQL database info */
-	    $host = "localhost";
-	    $user = "root";
-	    $password = "Zero";
-	    $database = "Zero";
-	    /* index/home page of ZeroShirts */
-	    $home = "./index.php";
-	    $con = new mysqli($host, $user, $password, $database);
-	    if ($con->connection_error) {
-	      die("Connection failed: " . $con->connect_error);
-	    } 
+	      </div>');	    
+	  	} else {
+		    /* MySQL database info */
+		    $host = "localhost";
+		    $user = "root";
+		    $password = "Zero";
+		    $database = "Zero";
+		    /* index/home page of ZeroShirts */
+		    $home = "./index.php";
+		    $con = new mysqli($host, $user, $password, $database);
+		    if ($con->connection_error) {
+		      die("Connection failed: " . $con->connect_error);
+		    } 
 
-	    $email = $_POST["email"];
-	    $pass = $_POST["pwd"];
-	    $pass2 = $_POST["pwd2"];
-	    if (strcmp($pass, $pass2) != 0) {
-	   		echo ('<div class="alert alert-danger" role="alert">
-	      	Passwords do not match. Try again.
-	      	</div>');
-	      	die;
+		    $email = $_POST["email"];
+		    $pass = $_POST["pwd"];
+		    $pass2 = $_POST["pwd2"];
+		    if (strcmp($pass, $pass2) != 0) {
+		   		echo ('<div class="alert alert-danger" role="alert">
+		      	Passwords do not match. Try again.
+		      	</div>');
+			} else {
+				$sql = 'SELECT * FROM users WHERE name="' . $email . '";';
+			    $res = $con->query($sql);
+			    if ($res->num_rows != 0) {
+			      echo ('<div class="alert alert-danger" role="alert">
+			      Email already being used. Please try again.
+			      </div>');
+			    } else {
+				    $sql = 'INSERT INTO users(name, password) VALUES ("' . $email . '", "' . hash('sha256', $pass) . '");';
+				    $res = $con->query($sql);
+				   	$sql = 'SELECT * FROM users WHERE name="' . $email . '";';
+				    $res = $con->query($sql);
+				    if ($res->num_rows <= 0) {
+				      echo ('<div class="alert alert-danger" role="alert">
+				      An unexpected error occured. Please try again.
+				      </div>');
+				      die;
+				    }
+				   	header('Location: ./login.php?newacc');
+				}
+			}
 		}
-		$sql = 'SELECT * FROM users WHERE name="' . $email . '";';
-	    $res = $con->query($sql);
-	    if ($res->num_rows != 0) {
-	      echo ('<div class="alert alert-danger" role="alert">
-	      Email already being used. Please try again.
-	      </div>');
-	      die;
-	    }
-	    $sql = 'INSERT INTO users(name, password) VALUES ("' . $email . '", "' . hash('sha256', $pass) . '");';
-	    $res = $con->query($sql);
-	   	$sql = 'SELECT * FROM users WHERE name="' . $email . '";';
-	    $res = $con->query($sql);
-	    if ($res->num_rows <= 0) {
-	      echo ('<div class="alert alert-danger" role="alert">
-	      An unexpected error occured. Please try again.
-	      </div>');
-	      die;
-	    }
-	   	header('Location: ./login.php?newacc');
 	}
 ?>
 <html>
@@ -54,7 +55,6 @@
 	  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
 </head>
 <body>
-	<?php include './navbar.php'; ?>
 	<br>
 	<div class="container body-content">
 		<form class="form-horizontal" action="./createacc.php?submit" method="POST">
