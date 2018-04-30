@@ -7,21 +7,23 @@
 <body>
 	<?php include './back/authcheck.php'; include './navbar.php'; $images = scandir("./resources/products"); ?>
 	<br>
-	<div class="container">    
-  <div class="row">
-    <div class="col-sm-4">
-      <div class="panel panel-primary">
-        <div class="panel-heading">SUMMER DEAL</div>
-        <div class="panel-body"><img src=<?php echo '"./resources/products/' . $images[2] . '"'?> class="img-responsive" style="width:100%" alt="Image"></div>
-        <div class="panel-footer"><strike>$19.99</strike> $10.99</div>
-      </div>
-    </div>
-    <div class="col-sm-4"> 
-      <div class="panel panel-danger">
-        <div class="panel-heading">POPULAR</div>
-        <div class="panel-body"><img src=<?php echo '"./resources/products/' . $images[3] . '"'?>  class="img-responsive" style="width:100%" alt="Image"></div>
-        <div class="panel-footer">$19.99</div>
-      </div>
+	<div class="container-fluid">
+	<div class="row">
+	<div class="col-6">
+  	<div class="row">
+    	<div class="col-sm-4">
+      		<div class="panel panel-primary">
+        		<div class="panel-heading">SUMMER DEAL</div>
+        		<div class="panel-body"><img src=<?php echo '"./resources/products/' . $images[2] . '"'?> class="img-responsive" style="width:100%" alt="Image"></div>
+        		<div class="panel-footer"><strike>$19.99</strike> $10.99</div>
+      		</div>
+    	</div>
+    	<div class="col-sm-4"> 
+      		<div class="panel panel-danger">
+        		<div class="panel-heading">POPULAR</div>
+        		<div class="panel-body"><img src=<?php echo '"./resources/products/' . $images[3] . '"'?>  class="img-responsive" style="width:100%" alt="Image"></div>
+        	<div class="panel-footer">$19.99</div>
+      	</div>
     </div>
     <div class="col-sm-4"> 
       <div class="panel panel-success">
@@ -30,10 +32,10 @@
         <div class="panel-footer">$19.99</div>
       </div>
     </div>
-  </div>
-</div><br>
+  </div><br>
+<!-- </div><br> -->
 
-<div class="container">
+<!-- <div class="container-fluid"> -->
 	<div class="row">    
         	<?php 
 				
@@ -58,8 +60,9 @@
 
 
 			?>
-	</div>		 
-</div>
+	</div>
+	</div>
+	<div class="col-4">
     <div class="d-flex flex-row">
     	<div class="p-2">		
 	
@@ -74,7 +77,7 @@
    		 		}
    		 	?>
    	</div>
-
+</div></div></div>
 		
 	<?php include './footer.php';?>
 	<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
