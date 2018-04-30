@@ -85,13 +85,15 @@
             <div class="alert alert-warning"><i class="fa fa-exclamation-triangle"></i> Username or Password is Incorrect</div>
         <?php elseif($logged_out): ?>
             <div class="alert alert-info"><i class="fa fa-check"></i> You have been logged out.</div>
+        <?php elseif(isset($_GET["newacc"])): ?>
+            <div class="alert alert-info"><i class="fa fa-check"></i> Account created. Please login to ensure correctness.</div>
         <?php endif ?>
 
         <div class="row">
         	<span class="col-sm-4"></span>
             <span class="col-sm-8">
                 Don’t have an account? &ensp;
-            <a class="txt2" href="#">
+            <a class="txt2" href="./createacc.php">
                 Sign Up
             </a>
         </span>

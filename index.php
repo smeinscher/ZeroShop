@@ -8,9 +8,12 @@
 	<?php include './back/authcheck.php'; include 'navbar.php';?>
 	<br>
 	<div class="d-flex justify-content-center">
-		<a href="./shirts/shirt1.php"><img src="./resources/shirt1.jpg" alt="World's #0 Programmer" style="width:400px;height:400px;border:3px solid black;"></a>
-		<a href="./shirts/shirt0.php"><img src="./resources/shirt0.jpg" alt="Zero Shirts Original" style="width:400px;height:400px;border:3px solid black;"></a>
-		<br>
+		<a href="./products.php?item=shirt1"><img src="./resources/products/shirt1.jpg" alt="World's #0 Programmer" style="width:400px;height:400px;border-left:3px solid black;border-right:3px solid black;"></a>
+		<a href="./products.php?item=shirt0"><img src="./resources/products/shirt0.jpg" alt="Zero Shirts Original" style="width:400px;height:400px;border-right:3px solid black;"></a>
+	</div>
+	<br>
+	<div class="d-flex justify-content-center"> 
+		<h2>Featured Products</h2>
 	</div>
 	<?php include 'footer.php';?>
 	<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
