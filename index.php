@@ -5,7 +5,17 @@
 	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/css/bootstrap.min.css" integrity="sha384-9gVQ4dYFwwWSjIDZnLEWnxCjeSWFphJiwGPXr1jddIhOegiu1FwO5qRGvFXOdJZ4" crossorigin="anonymous">
 </head>
 <body>
-	<?php include './back/authcheck.php'; include 'navbar.php';?>
+	<?php 
+		include './back/authcheck.php'; 
+		include './navbar.php';
+		if (isset($_GET['ordered'])) {
+			echo '<div class="alert alert-success"><i class="fa fa-check"></i>Thank you for your order</div>';
+			$sql = "DELETE FROM carts WHERE user='{$username}'";
+			if (!$result = $connection->query($sql)) {
+				echo '<div class="alert alert-danger"><i class="fa fa-check"></i>An unexpected error occured. Items not removed from cart :/</div>';
+			}
+		}
+	?>
 	<br>
 	<div class="d-flex justify-content-center">
 		<a href="./item.php?item=shirt1"><img src="./resources/products/shirt1.jpg" alt="World's #0 Programmer" style="width:400px;height:400px;border-left:3px solid black;border-right:3px solid black;"></a>

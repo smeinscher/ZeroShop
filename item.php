@@ -24,7 +24,7 @@
 				}
 			}
 		} else {
-			echo '<div class="alert alert-danger"><i class="fa fa-check"></i>Please login or create an account to add to cart</div>';
+			echo '<div class="alert alert-danger"><i class="fa fa-check"></i>Please login or <a href="createacc.php">sign up</a> to use cart</div>';
 		}
 	}
 ?>

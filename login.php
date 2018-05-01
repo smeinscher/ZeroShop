@@ -54,9 +54,9 @@
             <label class="control-label col-sm-1" for="email">Email:</label>
             <div class="col-sm-5">
                 <?php if(!$login_error): ?>
-                <input type="email" class="form-control" id="email" placeholder="Enter email" name="email">
+                <input type="email" class="form-control" id="email" placeholder="Enter email" name="email" required>
                 <?php else: ?>
-                <input type="email" class="form-control" id="email" placeholder="Enter email" name="email" value="<?php echo $_POST['email']?>" autofocus>
+                <input type="email" class="form-control" id="email" placeholder="Enter email" name="email" value="<?php echo $_POST['email']?>" autofocus required>
                 <?php endif ?>
             </div>
         </div>
@@ -64,7 +64,7 @@
         	<span class="col-sm-3"></span>
             <label class="control-label col-sm-1" for="pwd">Password:</label>
             <div class="col-sm-5">
-                <input type="password" class="form-control" id="pwd" placeholder="Enter password" name="pwd">
+                <input type="password" class="form-control" id="pwd" placeholder="Enter password" name="pwd" required>
             </div>
         </div>
         <div class="form-group row">
@@ -95,6 +95,14 @@
                 Don’t have an account? &ensp;
             <a class="txt2" href="./createacc.php">
                 Sign Up
+            </a>
+        </span>
+        </div>
+        <div class="row">
+            <span class="col-sm-4"></span>
+            <span class="col-sm-8">
+            <a class="txt2" href="./forgot.php">
+                Forgot password?
             </a>
         </span>
         </div>

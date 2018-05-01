@@ -47,6 +47,7 @@
 <!-- <div class="container-fluid"> -->
 	<div class="row">    
         	<?php 
+        		include "./back/database.php";
       			$start = 5;  		
 				$cat = $_GET["cat"];
 				if($cat) {
@@ -59,12 +60,21 @@
 						if ($product[0] != $cat[0])
 							continue;
 					}
+					$sql = "SELECT * FROM products WHERE name='{$product}'";
+					if ($result = $connection->query($sql)) {
+					 	if ($result->num_rows > 0) {
+					 		$row = $result->fetch_assoc();
+					 		$price = $row["price"];
+					 		$title = $row["title"];
+					 	}
+					}
+
 					echo 
 						"<div class='col-sm-4'> 
       						<div class='panel panel-primary'>
-        						<div class='panel-heading'>". $product ."</div>
+        						<div class='panel-heading'>". $title ."</div>
         						<div class='panel-body'> <a href='./item.php?item=".$product ."'><img src='./resources/products/" . $images[$i]  . "'class='img-responsive' style='width:100%' alt='Image'></a></div>
-       							<div class='panel-footer'>$19.99</div>
+       							<div class='panel-footer'>$".$price."</div>
       						</div>
     					</div>";
   			// 		if (($i - 5) % 3 == 0) {
