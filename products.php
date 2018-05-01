@@ -6,48 +6,64 @@
 </head>
 <body>
 	<?php include './back/authcheck.php'; include './navbar.php'; $images = scandir("./resources/products"); ?>
+	<?php if(isset($_GET["added"])):?>
+		<div class="alert alert-info"><i class="fa fa-check"></i>Item added</div>
+	<?php endif ?>
+	<?php if(isset($_GET["failed"])):?>
+		<div class="alert alert-danger"><i class="fa fa-check"></i>An unexpected error has occured. Please try again.</div>
+	<?php endif ?>
 	<br>
+	
 	<div class="container-fluid">
 	<div class="row">
 	<div class="col-9">
-  	<div class="row">
-    	<div class="col-sm-4">
-      		<div class="panel panel-primary">
-        		<div class="panel-heading">SUMMER DEAL</div>
-        		<div class="panel-body"><img src=<?php echo '"./resources/products/' . $images[2] . '"'?> class="img-responsive" style="width:100%" alt="Image"></div>
-        		<div class="panel-footer"><strike>$19.99</strike> $10.99</div>
-      		</div>
-    	</div>
-    	<div class="col-sm-4"> 
-      		<div class="panel panel-danger">
-        		<div class="panel-heading">POPULAR</div>
-        		<div class="panel-body"><img src=<?php echo '"./resources/products/' . $images[3] . '"'?>  class="img-responsive" style="width:100%" alt="Image"></div>
-        	<div class="panel-footer">$19.99</div>
-      	</div>
-    </div>
-    <div class="col-sm-4"> 
-      <div class="panel panel-success">
-        <div class="panel-heading">NEW</div>
-        <div class="panel-body"><img src=<?php echo '"./resources/products/' . $images[4] . '"'?>  class="img-responsive" style="width:100%" alt="Image"></div>
-        <div class="panel-footer">$19.99</div>
-      </div>
-    </div>
-  </div><br>
+		<?php if(!isset($_GET["cat"])): ?>
+	  	<div class="row">
+	    	<div class="col-sm-4">
+	      		<div class="panel panel-primary">
+	        		<div class="panel-heading">SUMMER DEAL</div>
+	        		<div class="panel-body"><a href='./item.php?item=<?php echo substr($images[2], 0, strlen($images[2])-4); ?>'><img src=<?php echo '"./resources/products/' . $images[2] . '"'?> class="img-responsive" style="width:100%" alt="Image"></a></div>
+	        		<div class="panel-footer"><strike>$19.99</strike> $10.99</div>
+	      		</div>
+	    	</div>
+	    	<div class="col-sm-4"> 
+	      		<div class="panel panel-danger">
+	        		<div class="panel-heading">POPULAR</div>
+	        		<div class="panel-body"><a href="./item.php?item=<?php echo substr($images[3], 0, strlen($images[3])-4); ?>"><img src=<?php echo '"./resources/products/' . $images[3] . '"'?>  class="img-responsive" style="width:100%" alt="Image"></a></div>
+	        	<div class="panel-footer">$19.99</div>
+	      	</div>
+	    </div>
+	    <div class="col-sm-4"> 
+	      <div class="panel panel-success">
+	        <div class="panel-heading">NEW</div>
+	        <div class="panel-body"><a href="./item.php?item=<?php echo substr($images[4], 0, strlen($images[4])-4); ?>"><img src=<?php echo '"./resources/products/' . $images[4] . '"'?>  class="img-responsive" style="width:100%" alt="Image"></a></div>
+	        <div class="panel-footer">$19.99</div>
+	      </div>
+	    </div>
+	 </div><br>
+	<?php endif ?>
 <!-- </div><br> -->
 
 <!-- <div class="container-fluid"> -->
 	<div class="row">    
         	<?php 
-				
+      			$start = 5;  		
+				$cat = $_GET["cat"];
+				if($cat) {
+					$start = 2;
+				}				
 				//echo "<div class='d-flex justify-content-center'>";
-				for ($i = 5; $i < count($images); $i++) {
+				for ($i = $start; $i < count($images); $i++) {
 					$product = substr($images[$i], 0, strlen($images[$i]) - 4);
-
+					if ($cat) {
+						if ($product[0] != $cat[0])
+							continue;
+					}
 					echo 
 						"<div class='col-sm-4'> 
       						<div class='panel panel-primary'>
         						<div class='panel-heading'>". $product ."</div>
-        						<div class='panel-body'> <img src='./resources/products/" . $images[$i]  . "'class='img-responsive' style='width:100%' alt='Image'></div>
+        						<div class='panel-body'> <a href='./item.php?item=".$product ."'><img src='./resources/products/" . $images[$i]  . "'class='img-responsive' style='width:100%' alt='Image'></a></div>
        							<div class='panel-footer'>$19.99</div>
       						</div>
     					</div>";
@@ -70,6 +86,8 @@
    	</div>
    	<div class="p-2">
   	 		<h2>Products</h2><br>
+  	 		<h4><a href="./products.php?cat=hats">Hats</a></h4>
+  	 		<h4><a href="./products.php?cat=shirts">Shirts</a></h4>
    		 	<?php
    		 		for ($i = 2; $i < count($images); $i++) {
    		 			$product = substr($images[$i], 0, strlen($images[$i]) - 4);

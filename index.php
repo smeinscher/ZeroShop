@@ -8,8 +8,8 @@
 	<?php include './back/authcheck.php'; include 'navbar.php';?>
 	<br>
 	<div class="d-flex justify-content-center">
-		<a href="./products.php?item=shirt1"><img src="./resources/products/shirt1.jpg" alt="World's #0 Programmer" style="width:400px;height:400px;border-left:3px solid black;border-right:3px solid black;"></a>
-		<a href="./products.php?item=shirt0"><img src="./resources/products/shirt0.jpg" alt="Zero Shirts Original" style="width:400px;height:400px;border-right:3px solid black;"></a>
+		<a href="./item.php?item=shirt1"><img src="./resources/products/shirt1.jpg" alt="World's #0 Programmer" style="width:400px;height:400px;border-left:3px solid black;border-right:3px solid black;"></a>
+		<a href="./item.php?item=shirt0"><img src="./resources/products/shirt0.jpg" alt="Zero Shirts Original" style="width:400px;height:400px;border-right:3px solid black;"></a>
 	</div>
 	<br>
 	<div class="d-flex justify-content-center"> 
