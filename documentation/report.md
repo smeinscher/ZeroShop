@@ -4,7 +4,7 @@
 [//]: # "Made for conversion with Pandoc"
 
 Identify Problems:
-==================
+------------------
 
 a.	When clicking on “products” user didn’t get the number of items displayed of the screen.
 Error of omission:  User could still see all the products, but there was lack of information. (Low severity)
@@ -27,7 +27,7 @@ g.	User clicked “submit” button on checkout page without adding full informa
 Error of commission: User had to go back and add information to complete the order. (high severity)
 
 Prioritize Problems:
-====================
+--------------------
 
 Highest to lowest priority
 
@@ -40,7 +40,7 @@ Highest to lowest priority
 7.	(e) Logout button issue.
 
 Theorized Reasons:
-==================
+------------------
 
 1.	(a) We believe its user preference issue. User wanted product page information to be displayed a certain way. User expected to see the number of products displayed on the page.
 
@@ -57,7 +57,7 @@ Theorized Reasons:
 7.	(g) This was oversight on our part. User forgot to add full information on checkout screen before clicking “Submit” button and didn’t get the warning about incomplete info. 
 
 Theorize Solutions:
-===================
+-------------------
 
 1.	This problem can easily be solved by adding the count of number of product displayed on screen on top and bottom.
 
@@ -75,7 +75,7 @@ Theorize Solutions:
 on checkout page. 
 
 Identify Successes:
-===================
+-------------------
 
 Identify Areas of uncertainty:
-==============================
+------------------------------

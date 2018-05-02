@@ -14,8 +14,8 @@ We expect the results from this study to help us improve the ZeroShop interface.
 
 The overall design of the interface is still highly fluid and radical changes to both the look-and-feel and layout of the interface can still be made, if nessisary.
 
-Concerns
---------
+Concerns and Goals
+------------------
 
 1. Concerns
 	+ Navigation
@@ -25,8 +25,8 @@ Concerns
 	+ Checking out
 2. Goals
 	+ Navigation
-		* The user will be able to navigate to any item within three clicks.
-		* The user will be able to acess the cart from any page with one click.
+		* The user will be able to navigate to any item within three clicks and within 5 seconds.
+		* The user will be able to acess the cart from any page with one click and within 3 seconds
 	+ Registration
 		* The user will be able to register an account without encourntering any errors.
 		* The user will be able to log-out of the site without losing thier place.
