@@ -65,5 +65,35 @@ a. It's your friend's birthday and you wated to the last minute to buy them some
 Measurements
 ------------
 
+The measurements for all of the test cases are qualitative. For each task, user actions are noted for the navigation paths participants take. User opinions are also recorded to determine the efficiency of site navigation and the participants' view of the site design's effectiveness.
+
+The measurement types for each task are:
+
+- User opinon on intuitiveness
+	* Was the link in a location you are comfortable with?
+	* Did you already know where to look even though you have never been to this page before?
+	* Did the link's location surprise you? How so?
+- User opinion on usefulness
+	* Do you think this feature is useful? Why or why not?
+	* Do you think your shopping experience will be changed if we remove this feature? Why or why not?
+	* Do you feel this feature can be improved? If so, how?
+- User opinion on efficiency
+	* Was it easy to checkout of the store/search for a category of item?
+	* Did you feel the checkout process was too short or too long?
+	* How can we make this feature better?
+- User opinion on design
+	* Do you fine the site's design appealing?
+	* Do you have any opinion's on the site's design?
+	* Was anything unnecessarily difficult?
+	* Did the site's design make you want to stay and shop? Why or why not?
+
 Test Methods
 ------------
+
+The test method of choice is an assessment test. The site is not complete, so we are not testing for validation but rather for ensuring our design is on the right track. This test method is also known as a heuristic evaluation, where we will have a team member sit with a test participant in a one-on-one session. The participant will be asked to accomplish a series of tasks where their actions and opinions will be recorded for analysis. The tests seek to explore functionality of the site's nvaigational paths, checkout process, and search features.
+
+The target population is Computer Science students and/or students who are familiar/interested in shopping online. This profile closely matches our skateholder persona and might give us results similar to that of our target population. For the purpose of this test, we will evaluate at least 5 users.
+
+The tester will be a volunteer from our design team. The tester will be required to find sample users and ask them to take the usability test. The tester will do a premilinary interview, asking questions such as their background with online shopping and some personal questions to help us determine the accuracy of our results for our target population. The tester will ask the participant to accomplish a specific task without instruction because we want to test how they will accomplish a task, then record how the participant accomplishes them one at a time. Over the course of the test, the tester will ask the participant questions to determine the participant's opinions on the design. After the test is complete, the tester will ask the participant some closing questions, take note of any suggestions to improve the design and usability of the site, and finally thank them for their participation. This will be done for each participant.
+
+We acknowledge that not every participant will be the same, nor will everyone fit into our exact stakeholder persona. We have taken this into account, and we can still evaluate the participant but note that he/she may produce different results. The results of the tasks participants will be asked to accomplish can also vary. Some tasks rely on previous tasks for state, and depending on the current page the participant is on, the tester is expected to be flexible in asking the participant to accomplish tasks without relying on completing previous tasks correctly. The results will not be negatively corrected if users make mistakes during the test. The tester will be recording all user actions, including mistakes, and will have room to make comments.
