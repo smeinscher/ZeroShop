@@ -73,5 +73,9 @@ on checkout page.
 Identify Successes:
 -------------------
 
+The team, like I’m sure many other teams had in mind, followed a very simple and minimalistic design for the site. Our opinion on online stores is that they are usually very cluttered and distracting when trying to browse ALL items. We liked the design of https://www.supremenewyork.com/ and tried to follow in their footsteps. There aren’t many options other than viewing items and each item page has a basic description, sizing, prices, and alternative color options, with a few other miscellaneous details. Following this design pattern would ensure that customers find items quickly and eliminate any room for confusion.
+
 Identify Areas of uncertainty:
 ------------------------------
+
+Fortunately we didn’t encounter many issues with our design upon testing. Users like the simple and quickness to view items without many distractions or sorting methods. However, we believe this is was the case because, like Supreme, a limited catalog to work with. If the site was intended to sell 100+ items then our design would fail, as it would take a very long time to browse items without any sorting mechanism. Customers would have to waste time browsing items that don’t pertain to them (i.e. different gender or age group). Development issues luckily did not limit our vision for the site. We only had minor issues/headaches with linking buttons, setting up databases, and sizing item pages.
