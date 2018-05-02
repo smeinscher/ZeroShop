@@ -36,6 +36,8 @@ Concerns and Goals
 
 Tasks
 -----
+
+	1. From any page, ask the participant to navigate to a page containing all products in the store. Make sure to
 	
 
 Scenarios
