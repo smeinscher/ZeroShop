@@ -13,6 +13,15 @@ Graphs
 ![Computer vs Phone](images/computer_phone_preference_chart.png)
 ![Online vs In-Store](images/online_in_store_preference_chart.png)
 
+User Majors
+-----------
+
++ Biochemistry
++ Computer science
++ Communication
++ English 
++ Kinesiology
+
 User Input
 ----------
 

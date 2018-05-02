@@ -37,19 +37,33 @@ Concerns and Goals
 Tasks
 -----
 
-	1. From any page, ask the participant to navigate to a page containing all products in the store. Make sure to
-	
+7. From any page, Ask the participant to register a new account. Time this task.
+
+8. Once logged in, ask the participant to log back out. Time this task.
+
+9. Once logged out, ask the participant to log back in. Time this task.
+
+
+1. From any page, ask the participant to navigate to a page containing all products in the store. Make sure to time how long it takes the paricipant to find the link to the page.
+
+2. Ask the participant to return to the main page from any page other than the main page. Make sure to not how the participant chooses to get there.
+
+3. On any product details page, ask the participant to add the product to the cart. Make sure to time how long it takes the participant to do so.
+
+4. On the shopping cart ask the participant to remove an item from the cart. Make sure to time this task.
+
+5. From any page, ask the perticipant to navigate to a item description for a hat. Time this task and note the choices the perticiant makes to get there.
+
+6. On the shopping cart, ask the perticipant ask the participant to add one or more to the quantity of one item in the shopping cart. Note how the user chooses to do this.
+ 
 
 Scenarios
 ---------
 
-1. It's your friend's birthday and you wated to the last minute to buy them something. You know they're a bit of a nerd and a bit of a hipster. During a Bing search for "Ironic programmer shirts" you come across ZeroShop and are turned on by their self-depricating sense of humor. Your goal is to browse for a bad programming shirt under $20 and buy it.
-
-2. 
+a. It's your friend's birthday and you wated to the last minute to buy them something. You know they're a bit of a nerd and a bit of a hipster. During a Bing search for "Ironic programmer shirts" you come across ZeroShop and are turned on by their self-depricating sense of humor. Your goal is to browse for a bad programming shirt under $20 and buy it.
 
 Measurements
 ------------
 
 Test Methods
 ------------
-
