@@ -1,6 +1,3 @@
-[//]: # "study_design.md"
-[//]: # "Author: Mackenzie Goode"
-[//]: # "Made for conversion with Pandoc"
 
 Study Design
 ============
@@ -31,11 +28,15 @@ Concerns and Goals
 		* The user will be able to register an account without encourntering any errors.
 		* The user will be able to log-out of the site without losing thier place.
 	+ Browsing the product catalog
-		* 
-
+		* The user will be able to view any product within 10 seconds of seeing the main page.
+	+ Using the cart
+		* The user will be able to determine the total cost of the purchace (sans tax) immediatly.
+	+ Checking out
+		* The user will be able to checkout within 2 minutes from viewing the cart (including inputing information.)
 
 Tasks
 -----
+	
 
 Scenarios
 ---------

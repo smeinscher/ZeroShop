@@ -1,7 +1,3 @@
-[//]: # "study_script.md"
-[//]: # "Author: Miguel Perez, Analyssa Silva"
-[//]: # "Converted to markdown by: Mackenzie Goode"
-[//]: # "Made for conversion with Pandoc"
 
 Study Script
 ============
