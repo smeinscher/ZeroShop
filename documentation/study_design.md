@@ -17,11 +17,32 @@ The overall design of the interface is still highly fluid and radical changes to
 Concerns
 --------
 
-Task
-----
+1. Concerns
+	+ Navigation
+	+ Registration
+	+ Browsing the product catalog
+	+ Using the cart
+	+ Checking out
+2. Goals
+	+ Navigation
+		* The user will be able to navigate to any item within three clicks.
+		* The user will be able to acess the cart from any page with one click.
+	+ Registration
+		* The user will be able to register an account without encourntering any errors.
+		* The user will be able to log-out of the site without losing thier place.
+	+ Browsing the product catalog
+		* 
+
+
+Tasks
+-----
 
 Scenarios
 ---------
+
+1. It's your friend's birthday and you wated to the last minute to buy them something. You know they're a bit of a nerd and a bit of a hipster. During a Bing search for "Ironic programmer shirts" you come across ZeroShop and are turned on by their self-depricating sense of humor. Your goal is to browse for a bad programming shirt under $20 and buy it.
+
+2. 
 
 Measurements
 ------------
